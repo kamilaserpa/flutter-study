@@ -49,6 +49,11 @@ Para encapsular um trecho de código com widgets diversos podemos utilizar `Stat
 
 Podemos acessar artigo sobre [Qual é a diferença entre stateless e stateful widget?](https://www.alura.com.br/artigos/flutter-diferenca-entre-stateless-e-statefull-widget) e a [página da documentação sobre o uso desses Widgets](https://docs.flutter.dev/development/ui/interactive#stateful-and-stateless-widgets).
 
+
+Exemplos:
+ - [Scaffold](https://api.flutter.dev/flutter/material/Scaffold-class.html) implementa  estrutura báasica de layout visual do Material Design.
+ - [Padding](https://api.flutter.dev/flutter/widgets/Padding-class.html) , um widget que aceita EdgeInsets para descrever suas margens.
+ - 
 ### Estado - State
 Estado são os elementos que podem ser alterados quando um usuário realiza alguma ação. Basicamente, um estado é uma informação ou grupo de informações que são alteradas durante o tempo de execução do aplicativo. É o estado que possibilita o dinamismo dos elementos no Flutter.
 

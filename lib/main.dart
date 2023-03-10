@@ -16,6 +16,9 @@ class BytebankApp extends StatelessWidget {
 }
 
 class FormularioTransferencia extends StatelessWidget {
+  final TextEditingController _controladorNumeroConta = TextEditingController();
+  final TextEditingController _controladorValor = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +28,7 @@ class FormularioTransferencia extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
+                controller: _controladorNumeroConta,
                 style: TextStyle(fontSize: 24.0),
                 decoration: InputDecoration(
                     labelText: 'Número da conta', hintText: '0000'),
@@ -34,6 +38,7 @@ class FormularioTransferencia extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
+                controller: _controladorValor,
                 style: TextStyle(fontSize: 24.0),
                 decoration: InputDecoration(
                     icon: Icon(Icons.monetization_on),
@@ -44,7 +49,17 @@ class FormularioTransferencia extends StatelessWidget {
             ),
             ElevatedButton(
               child: Text('Confirmar'),
-              onPressed: () {},
+              onPressed: () {
+                debugPrint('Clicou Confirmar!');
+                debugPrint(_controladorValor.text);
+                final int? numeroConta =
+                    int.tryParse(_controladorNumeroConta.text);
+                final double? valor = double.tryParse(_controladorValor.text);
+                if (numeroConta != null && valor != null) {
+                  final transferenciaCriada = Transferencia(valor, numeroConta);
+                  debugPrint('$transferenciaCriada');
+                }
+              },
             ),
           ],
         ));
@@ -59,7 +74,6 @@ class ListaTransferencia extends StatelessWidget {
         title: Text('Transferências'),
       ),
       body: Column(
-        // ignore: prefer_const_literals_to_create_immutables
         children: <Widget>[
           ItemTransferencia(Transferencia(100.0, 1000)),
           ItemTransferencia(Transferencia(200.0, 2000)),
@@ -94,4 +108,9 @@ class Transferencia {
 
   final double valor;
   final int numeroConta;
+
+  @override
+  String toString() {
+    return 'Transferencia{valor: $valor, numeroConta: $numeroConta}';
+  }
 }
