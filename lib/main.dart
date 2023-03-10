@@ -8,27 +8,47 @@ void main() => runApp(
           appBar: AppBar(
             title: Text('Transferências'),
           ),
-          body: Column(
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              Card(
-                child: ListTile(
-                  leading: Icon(Icons.monetization_on),
-                  title: Text('100,0'),
-                  subtitle: Text('2340001'),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: Icon(Icons.monetization_on),
-                  title: Text('100,0'),
-                  subtitle: Text('2340001'),
-                ),
-              ),
-            ],
-          ),
+          body: ListaTransferencia(),
           floatingActionButton:
               FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
         ),
       ),
     );
+
+class ListaTransferencia extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      // ignore: prefer_const_literals_to_create_immutables
+      children: <Widget>[
+        ItemTransferencia(Transferencia(100.0, 1000)),
+        ItemTransferencia(Transferencia(200.0, 2000)),
+        ItemTransferencia(Transferencia(300.0, 3000)),
+      ],
+    );
+  }
+}
+
+class ItemTransferencia extends StatelessWidget {
+  final Transferencia _transferencia;
+
+  ItemTransferencia(this._transferencia);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Icon(Icons.monetization_on),
+        title: Text(_transferencia.valor.toString()),
+        subtitle: Text(_transferencia.numeroConta.toString()),
+      ),
+    );
+  }
+}
+
+class Transferencia {
+  Transferencia(this.valor, this.numeroConta);
+
+  final double valor;
+  final int numeroConta;
+}

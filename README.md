@@ -41,3 +41,8 @@ A documentação com lista de Widgets pode ser encontrada em https://docs.flutte
 
 Na página http://docs.flutter.dev podemos consultar o catálogo de widgets flutter para [Material Design](https://docs.flutter.dev/development/ui/widgets/material), assim como componentes do [Cupertino](https://docs.flutter.dev/development/ui/widgets/cupertino) que apresenta um estilo de design comum na plataforma do iOS.
 
+Para criar um Widget criamos uma classe que pode herdar de `Widget`, `StatelessWidget` ou `StatefulWidget`. A herança de Widget, que é uma classe genérica, indica que queremos criar um widget de mais baixo nível como temos os widgets Text(), Card(), Column().
+
+Para encapsular um trecho de código com widgets diversos podemos utilizar `StatelessWidget` e `StatefulWidget`. A diferença entre elas é que `StatefulWidget` tem a capacidade de modificar o conteúdo do widget de maneira dinâmica a partir de alguns eventos que acontecem no aplicativo, enquanto o `StatelessWidget` não permite esse tipo de modificação.
+
+
