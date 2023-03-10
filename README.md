@@ -43,6 +43,9 @@ Na página http://docs.flutter.dev podemos consultar o catálogo de widgets flut
 
 Para criar um Widget criamos uma classe que pode herdar de `Widget`, `StatelessWidget` ou `StatefulWidget`. A herança de Widget, que é uma classe genérica, indica que queremos criar um widget de mais baixo nível como temos os widgets Text(), Card(), Column().
 
-Para encapsular um trecho de código com widgets diversos podemos utilizar `StatelessWidget` e `StatefulWidget`. A diferença entre elas é que `StatefulWidget` tem a capacidade de modificar o conteúdo do widget de maneira dinâmica a partir de alguns eventos que acontecem no aplicativo, enquanto o `StatelessWidget` não permite esse tipo de modificação.
+Para encapsular um trecho de código com widgets diversos podemos utilizar `StatelessWidget` e `StatefulWidget`. A diferença entre elas é que `StatefulWidget` tem a capacidade de modificar o conteúdo do widget de maneira dinâmica a partir de alguns eventos que acontecem no aplicativo, ou seja, aceita mudanças de estado, enquanto o `StatelessWidget` não permite esse tipo de modificação.
 
+Podemos acessar artigo sobre [Qual é a diferença entre stateless e stateful widget?](https://www.alura.com.br/artigos/flutter-diferenca-entre-stateless-e-statefull-widget) e a [página da documentação sobre o uso desses Widgets](https://docs.flutter.dev/development/ui/interactive#stateful-and-stateless-widgets).
 
+### Estado - State
+Estado são os elementos que podem ser alterados quando um usuário realiza alguma ação. Basicamente, um estado é uma informação ou grupo de informações que são alteradas durante o tempo de execução do aplicativo. É o estado que possibilita o dinamismo dos elementos no Flutter.
