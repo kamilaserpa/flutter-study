@@ -39,3 +39,5 @@ A documentação com lista de Widgets pode ser encontrada em https://docs.flutte
 
 ![Estrutura de árvore](images/estrutura-widgets.png)
 
+Na página http://docs.flutter.dev podemos consultar o catálogo de widgets flutter para [Material Design](https://docs.flutter.dev/development/ui/widgets/material), assim como componentes do [Cupertino](https://docs.flutter.dev/development/ui/widgets/cupertino) que apresenta um estilo de design comum na plataforma do iOS.
+
