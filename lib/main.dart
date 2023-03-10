@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -19,8 +19,35 @@ class FormularioTransferencia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Criando transferencia')),
-    );
+        appBar: AppBar(title: Text('Criando transferência')),
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                style: TextStyle(fontSize: 24.0),
+                decoration: InputDecoration(
+                    labelText: 'Número da conta', hintText: '0000'),
+                keyboardType: TextInputType.number,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                style: TextStyle(fontSize: 24.0),
+                decoration: InputDecoration(
+                    icon: Icon(Icons.monetization_on),
+                    labelText: 'Valor',
+                    hintText: '0.00'),
+                keyboardType: TextInputType.number,
+              ),
+            ),
+            ElevatedButton(
+              child: Text('Confirmar'),
+              onPressed: () {},
+            ),
+          ],
+        ));
   }
 }
 

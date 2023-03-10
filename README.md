@@ -24,7 +24,9 @@ O id do emulador pode ser encontrado a partir do comando `flutter emulators`.
 
 No <b>Visual Studio Code</b> selecione o emulador no canto inferior direito, por exemplo: Iphone, Chrome, Nexus. Na barra superior clique em `Run`, Start Debugging ou Run Without Debugging, provavél atalho `Ctrl + F5`, então a aplicação será inicializada no emulador.
 
-### Rect-style
+[Hot reload](https://docs.flutter.dev/development/tools/hot-reload).
+
+### React-style
 Diferente de outras plataformas, o Flutter cria o layout via código fonte, ou seja, sem a necessidade de um arquivo separado para o layout, como por exemplo, HTML ou XML também conhecido como modo imperativo.
 
 Esse tipo de abordagem é conhecida como estilo de reação (react-style) ou declarativa (declarative). 
@@ -49,3 +51,4 @@ Podemos acessar artigo sobre [Qual é a diferença entre stateless e stateful wi
 
 ### Estado - State
 Estado são os elementos que podem ser alterados quando um usuário realiza alguma ação. Basicamente, um estado é uma informação ou grupo de informações que são alteradas durante o tempo de execução do aplicativo. É o estado que possibilita o dinamismo dos elementos no Flutter.
+
