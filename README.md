@@ -56,6 +56,7 @@ Exemplos:
  - [ListView](https://api.flutter.dev/flutter/widgets/ListView-class.html), lista itens. Para sua implementação considere o uso da função `builder()` do ListView que exige a implementação das propriedades:
    - `itemCount`: que espera um int para determinar a quantidade de elementos na lista;
    - `itemBuilder`: que espera um callback que recebe um BuildContext e int como argumento e devolve um Widget via expressão lambda.
+ - [SingleChildScrollView](https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html) adiciona efeito de scroll em outro widget da propriedade child.
 
 ### Estado - State
 Estado são os elementos que podem ser alterados quando um usuário realiza alguma ação. Basicamente, um estado é uma informação ou grupo de informações que são alteradas durante o tempo de execução do aplicativo. É o estado que possibilita o dinamismo dos elementos no Flutter.
