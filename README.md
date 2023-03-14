@@ -70,3 +70,5 @@ Além da navegação com o push(), é possível também configurar rotas diretam
 
 ### Tema
 Utilizamos a ferramenta do Material Design na [página](https://m3.material.io/theme-builder#/custom) https://material.io/resources/ `Resources`, `Material Theme Builder`.
+
+Documentação sobre ThemeData: https://api.flutter.dev/flutter/material/ThemeData-class.html.
