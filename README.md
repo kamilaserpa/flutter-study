@@ -72,3 +72,12 @@ Além da navegação com o push(), é possível também configurar rotas diretam
 Utilizamos a ferramenta do Material Design na [página](https://m3.material.io/theme-builder#/custom) https://material.io/resources/ `Resources`, `Material Theme Builder`.
 
 Documentação sobre ThemeData: https://api.flutter.dev/flutter/material/ThemeData-class.html.
+
+### Organização do projeto
+
+Seguindo padrão de [boas práticas da comunidade](https://medium.com/flutter-community/flutter-code-organization-de3a4c219149), consideramos os seguintes diretórios no nosso projeto exemplo:
+
+ - models -> colocar código para modelos;
+ - screens -> Widgets que representam uma tela inteira;
+ - components -> Widgets que representam componentes menores reutilizáveis.
+
