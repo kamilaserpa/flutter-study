@@ -53,7 +53,16 @@ Podemos acessar artigo sobre [Qual é a diferença entre stateless e stateful wi
 Exemplos:
  - [Scaffold](https://api.flutter.dev/flutter/material/Scaffold-class.html) implementa  estrutura báasica de layout visual do Material Design.
  - [Padding](https://api.flutter.dev/flutter/widgets/Padding-class.html) , um widget que aceita EdgeInsets para descrever suas margens.
- - 
+ - [ListView](https://api.flutter.dev/flutter/widgets/ListView-class.html), lista itens. Para sua implementação considere o uso da função `builder()` do ListView que exige a implementação das propriedades:
+   - `itemCount`: que espera um int para determinar a quantidade de elementos na lista;
+   - `itemBuilder`: que espera um callback que recebe um BuildContext e int como argumento e devolve um Widget via expressão lambda.
+
 ### Estado - State
 Estado são os elementos que podem ser alterados quando um usuário realiza alguma ação. Basicamente, um estado é uma informação ou grupo de informações que são alteradas durante o tempo de execução do aplicativo. É o estado que possibilita o dinamismo dos elementos no Flutter.
 
+[StatefulWidget](https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html) faz referência a um widget que tem seu estado mutável. É responsabilidade do implementador do widget garantir que o estado seja prontamente notificado quando sofrer alteração, usando a função [State.setState](https://api.flutter.dev/flutter/widgets/State/setState.html).
+
+Dentro da classe que estende `State<ExampleWidget>` podemos acessar o objeto `widget` que mantém a referência de StatefulWidget da extensão de State (ExampleWidget).
+
+### Navegação por nome
+Além da navegação com o push(), é possível também configurar rotas diretamente no MaterialApp e navegar por meio do pushNamed() que recebe a rota como String e entra na tela configurada. Confira documentação https://docs.flutter.dev/cookbook/navigation/named-routes.
