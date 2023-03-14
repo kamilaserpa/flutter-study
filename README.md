@@ -67,3 +67,6 @@ Dentro da classe que estende `State<ExampleWidget>` podemos acessar o objeto `wi
 
 ### Navegação por nome
 Além da navegação com o push(), é possível também configurar rotas diretamente no MaterialApp e navegar por meio do pushNamed() que recebe a rota como String e entra na tela configurada. Confira documentação https://docs.flutter.dev/cookbook/navigation/named-routes.
+
+### Tema
+Utilizamos a ferramenta do Material Design na [página](https://m3.material.io/theme-builder#/custom) https://material.io/resources/ `Resources`, `Material Theme Builder`.
